@@ -1,8 +1,12 @@
 import 'package:flutter/material.dart';
-import 'homepage.dart';
+import 'package:flutter/services.dart';
+import 'board.dart';
 
 void main() {
-  runApp(RollBall());
+  WidgetsFlutterBinding.ensureInitialized();
+  SystemChrome.setPreferredOrientations([DeviceOrientation.landscapeLeft]).then((_) {
+    runApp(RollBall());
+  });
 }
 
 class RollBall extends StatelessWidget {
